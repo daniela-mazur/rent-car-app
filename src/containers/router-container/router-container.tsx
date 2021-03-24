@@ -1,24 +1,19 @@
 import { Switch } from "react-router";
-import { BrowserRouter } from "react-router-dom";
 
 import { modules } from "modules";
 
 import { PrivateRoute } from "./private-route";
 import { PublicRoute } from "./public-route";
 
-const RouterContainer = () => {
+const RouterContainer: React.FC = () => {
   return (
-    <BrowserRouter>
-      <Switch>
-        {modules.map((module) => {
-          const RouteComponent = module.private ? PrivateRoute : PublicRoute;
+    <Switch>
+      {modules.map((module) => {
+        const RouteComponent = module.private ? PrivateRoute : PublicRoute;
 
-          console.log("map", module);
-
-          return <RouteComponent key={module.name} {...module} />;
-        })}
-      </Switch>
-    </BrowserRouter>
+        return <RouteComponent key={module.name} {...module} />;
+      })}
+    </Switch>
   );
 };
 
