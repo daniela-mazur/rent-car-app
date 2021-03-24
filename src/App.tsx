@@ -1,7 +1,7 @@
-import "./App.css";
+import { RouterContainer } from "containers/router-container";
 
-function App() {
-  return <div></div>;
-}
+const App = () => {
+  return <RouterContainer></RouterContainer>;
+};
 
 export default App;
