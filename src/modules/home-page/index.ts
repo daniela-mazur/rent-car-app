@@ -3,7 +3,7 @@ import { HomePage } from "./home-page";
 const HomePageModule = {
   name: "Home Page",
   component: HomePage,
-  path: "/home-page",
+  path: "/",
   exact: true,
   private: false,
 };
